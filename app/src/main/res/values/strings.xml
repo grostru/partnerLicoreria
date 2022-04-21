@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Partner Licoreria</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Desde 1957</string>
+    <string name="nav_header_subtitle">bodegaelgato@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Configuración</string>
+
+    <!--Opciones del Menu-->
+    <string name="menu_shop">Gestión Tienda</string>
+    <string name="menu_enotur">Histórico Pedidos</string>
+
+    <!--Cadenas para manejar el dialog error-->
+    <string name="dialog_title">Mensaje</string>
+    <string name="dialog_error_message">Se ha producido un Error</string>
+    <string name="dialog_error_accept">Aceptar</string>
+
+    <!-- Cadenas para manejar la opción de menú Inicio-->
+    <string name="delaVidATuBoca1">\u0009Bodegas el Gato es una empresa familiar <b>fundada en el año 1957</b>. Se ubica en el casco antiguo de la villa de Rota, pueblo costero situado en el litoral gaditano.</string>
+    <string name="delaVidATuBoca2">\u0009<b>Juan Martínez Martín-Niño “El Gato”</b>, junto a su familia, llevan a cabo esta bonita labor, cuidando al máximo la elaboración desde el viñedo hasta su embotellado.</string>
+    <string name="delaVidATuBoca3">\u0009En nuestras instalaciones producimos y embotellamos vinos Finos, Moscatel, Cream, Pedro Ximenez, Oloroso y Tintilla de Rota, vino originario de esta localidad. Nuestros vinos se distinguen en el mercado por las marcas El Mayeto, Gran Mayeto, J. Martínez y Tehigo.</string>
+
+    <!-- Cadenas para manejar la opción de menú Licoreria-->
+    <string name="licoreria1">\u0009Nuestros años de experiencia en el sector vinícola los hemos trasladado a nuestro servicio de distribución, donde nuestro principal objetivo es ofrecer al cliente la más amplia variedad de productos entre las categorías de vinos y destilados siempre apoyados por profesionales que nos orientan sobre tendencias y nuevas formas de consumo.</string>
+    <string name="licoreria2">\u0009Para el desarrollo de nuestra actividad contamos con una tienda y vehículos comerciales para el reparto, tanto en la localidad como en sus cercanías. De esta forma nuestros productos pueden llegar tanto al consumidor final como al comerciante.</string>
+    <string name="licoreria3">\u0009En nuestras instalaciones producimos y embotellamos vinos Finos, Moscatel, Cream, Pedro Ximenez, Oloroso y Tintilla de Rota, vino originario de esta localidad. Nuestros vinos se distinguen en el mercado por las marcas El Mayeto, Gran Mayeto, J. Martínez y Tehigo.</string>
+    <string name="str_inicio_sesion">Bienvenido, por favor inicie sesión.</string>
+
+    <!-- Layout Autentication-->
+    <string name="str_Email">Email</string>
+    <string name="str_Google">Google</string>
+    <string name="str_Facebook">Facebook</string>
+    <string name="str_Tlfn">Teléfono</string>
+    <string name="str_licoreria">Licorería el Gato</string>
+    <string name="str_cerrar_sesion">Cerrar sesión</string>
+
+    <!-- Gestión Productos de la Tienda -->
+    <string name="product_create">Crear</string>
+    <string name="hint_name">Nombre del producto</string>
+    <string name="hint_description">Descripción</string>
+    <string name="hint_category">Categoría</string>
+    <string name="hint_quantity">Cantidad</string>
+    <string name="hint_price">Precio</string>
+    <string name="hint_status">Estado</string>
+
+    <!-- Tienda Online Licoreria-->
+    <string name="product_empty_cart">Carrito vacío</string>
+    <string name="product_view_cart">Ver carrito</string>
+    <string name="product_msg_loading">Preparando todo…</string>
+    <string name="product_full_cart">Total: %1$.2f €</string>
+    <string name="product_menu_history">Historial de compras</string>
+
+    <!-- Detalles del Producto-->
+    <string name="detail_add_to_cart">Añadir al carrito</string>
+    <string name="detail_quantity">Disponibles: %1$d</string>
+    <string name="detail_total_price">&lt;b>&lt;big>Total: %1$.2f €&lt;/big>&lt;/b>&lt;br/>(%2$d x %3$.2f€)</string>
+
+    <string name="cart_title">Carrito de compra</string>
+    <string name="cart_pay">Realizar Pedido</string>
+
+    <string name="order_track_shipment">Seguir envio</string>
+    <string name="order_status">Estado: %1$s</string>
+    <string name="order_id">ID: %1$s</string>
+    <string name="order_chat_help">¿Necesitas ayuda?</string>
+    <string name="order_title">Historial de compras</string>
+
+    <string name="track_title">Seguimiento del Pedido</string>
+
+    <string name="order_status_oredered">Pedido Realizado</string>
+    <string name="order_status_preparing">Preparando su Pedido</string>
+    <string name="order_status_sent">Enviado</string>
+    <string name="order_status_delivered">Entregado</string>
+    <string name="order_status_unknown">Desconocido</string>
+
+    <string name="chat_title">Soporte</string>
+    <string name="hint_chat">escribe algo…</string>
+
+</resources>

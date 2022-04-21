@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "776046356472",
+    "firebase_url": "https://licoreria-87425-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "licoreria-87425",
+    "storage_bucket": "licoreria-87425.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776046356472:android:bfb5ad0814b340faf4d80d",
+        "android_client_info": {
+          "package_name": "com.grt.partnerLicoreria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776046356472-2du887qoas43pb3ppfr3ivkqmcqq9ea9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.grt.partnerLicoreria",
+            "certificate_hash": "07aa05fed3f688e12e2b3b851450b7799ae71463"
+          }
+        },
+        {
+          "client_id": "776046356472-ib7uhh8vtu3f5cb15o9uv44gap3jd5g0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLN_7GmjOBq9AlJnG7m--6VS5xZJCxADY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776046356472-ib7uhh8vtu3f5cb15o9uv44gap3jd5g0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776046356472:android:1288e47088e71bc9f4d80d",
+        "android_client_info": {
+          "package_name": "com.grt.tiendalicoreria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776046356472-eqdsp0gfjujsm5vm1petv53pak7f672k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.grt.tiendalicoreria",
+            "certificate_hash": "07aa05fed3f688e12e2b3b851450b7799ae71463"
+          }
+        },
+        {
+          "client_id": "776046356472-ib7uhh8vtu3f5cb15o9uv44gap3jd5g0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLN_7GmjOBq9AlJnG7m--6VS5xZJCxADY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776046356472-ib7uhh8vtu3f5cb15o9uv44gap3jd5g0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
