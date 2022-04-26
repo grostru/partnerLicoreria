@@ -69,21 +69,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.action_sign_out -> {
-                this?.let { context ->
-                    AuthUI.getInstance().signOut(context)
-                        .addOnSuccessListener {
-                            Toast.makeText(context, "Sesión Terminada.", Toast.LENGTH_SHORT).show()
-                        }
-                        .addOnCompleteListener {
-                            if (it.isSuccessful){
-                                this.onBackPressed()
-                            } else {
-                                Toast.makeText(context, "No se pudo cerrar la sesión.", Toast.LENGTH_SHORT).show()
-                            }
-                        }
-                }
-            }
             R.id.action_order_history -> {
                 this.findNavController(R.id.nav_host_fragment_content_main).navigate(R.id.nav_order)
             }

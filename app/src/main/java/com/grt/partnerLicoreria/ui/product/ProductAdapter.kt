@@ -14,7 +14,8 @@ import com.grt.partnerLicoreria.domain.model.ProductModel
  * 24/03/2022
  */
 class ProductAdapter(private val productList:List<ProductModel> = emptyList(),
-                     private val listener: (ProductModel) -> Unit)
+                     private val listenerClick: (ProductModel) -> Unit,
+                     private val listenerOnclick: (ProductModel) -> Unit)
     : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
     private var mutableProductList : MutableList<ProductModel> = mutableListOf(*productList.toTypedArray())
@@ -42,7 +43,11 @@ class ProductAdapter(private val productList:List<ProductModel> = emptyList(),
                 }
             }
             itemView.setOnClickListener {
-                listener(productModel)
+                listenerClick(productModel)
+            }
+            itemView.setOnLongClickListener {
+                listenerOnclick(productModel)
+                true
             }
         }
     }

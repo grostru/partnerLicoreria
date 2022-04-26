@@ -18,6 +18,7 @@ class ProductViewModel(
 
     companion object{
         const val NAV_ADD_PRODUCT = 0
+        const val NAV_DEL_PRODUCT = 1
     }
 
     private val liveListProducts: MutableLiveData<List<ProductModel>> = MutableLiveData()
@@ -31,9 +32,13 @@ class ProductViewModel(
     }
 
     // Función encargada del manejo de haber hecho click en uno de los elementos de la lista de
-    // Pokemon y navega hasta la pantalla de Detalles
-    fun onActionProductClicked(productModel: ProductModel) {
+    // Productos
+    fun onActionProductClicked(productModel: ProductModel, action:Int) {
         navigate(NavData(NAV_ADD_PRODUCT, productModel))
+    }
+
+    fun onActionProductLongClicked(productModel: ProductModel, action:Int) {
+        navigate(NavData(NAV_DEL_PRODUCT, productModel))
     }
 
     override fun onInitialization() {}

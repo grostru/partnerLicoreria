@@ -12,6 +12,6 @@ import com.grt.partnerLicoreria.domain.model.OrderModel
  * https://www.udemy.com/user/alain-nicolas-tello/
  ***/
 interface OnOrderListener {
-    fun onTrack(order: OrderModel)
     fun onStartChat(order: OrderModel)
+    fun onStatusChange(order: OrderModel)
 }

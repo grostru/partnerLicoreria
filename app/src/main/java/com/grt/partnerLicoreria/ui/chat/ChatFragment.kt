@@ -6,6 +6,7 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
@@ -23,7 +24,6 @@ import com.grt.partnerLicoreria.data.firestore.MessageModelDB
 import com.grt.partnerLicoreria.databinding.FragmentChatBinding
 import com.grt.partnerLicoreria.domain.model.MessageModel
 import com.grt.partnerLicoreria.domain.model.OrderModel
-import com.grt.partnerLicoreria.ui.track.TrackFragmentArgs
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class ChatFragment : BaseFragment<FragmentChatBinding, ChatViewModel>(), OnChatListener {
@@ -34,7 +34,7 @@ class ChatFragment : BaseFragment<FragmentChatBinding, ChatViewModel>(), OnChatL
 
     private var order: OrderModel? = null
 
-    val args: TrackFragmentArgs by navArgs()
+    val args: ChatFragmentArgs by navArgs()
 
     override fun provideBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentChatBinding {
         return FragmentChatBinding.inflate(inflater,container,false)
@@ -110,9 +110,8 @@ class ChatFragment : BaseFragment<FragmentChatBinding, ChatViewModel>(), OnChatL
             snapshot.key?.let {
                 message.id = it
             }
-            FirebaseAuth.getInstance().currentUser?.let { user ->
-                message.myUid = user.uid
-            }
+            message.myUid = Constants.USER_ID
+
             return  message
         }
         return null
@@ -148,11 +147,9 @@ class ChatFragment : BaseFragment<FragmentChatBinding, ChatViewModel>(), OnChatL
             order?.let {
                 val database = FirebaseDatabase.getInstance(Constants.URL_REALTIME_DATABASE)
                 val chatRef = database.getReference(Constants.PATH_CHATS).child(it.id)
-                val user = FirebaseAuth.getInstance().currentUser
 
-                user?.let {
                     val message = MessageModelDB(message = binding.etMessage.text.toString().trim(),
-                        sender = it.uid)
+                        sender = Constants.USER_ID)
 
                     binding.ibSend.isEnabled = false
 
@@ -163,7 +160,7 @@ class ChatFragment : BaseFragment<FragmentChatBinding, ChatViewModel>(), OnChatL
                         .addOnCompleteListener {
                             binding.ibSend.isEnabled = true
                         }
-                }
+
             }
         }
     }
@@ -171,24 +168,25 @@ class ChatFragment : BaseFragment<FragmentChatBinding, ChatViewModel>(), OnChatL
     private fun setupActionBar(){
         (activity as? AppCompatActivity)?.let {
             it.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            it.supportActionBar?.setDisplayShowHomeEnabled(true)
             it.supportActionBar?.title = getString(R.string.chat_title)
             setHasOptionsMenu(true)
         }
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    /*override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home){
             activity?.onBackPressed()
         }
         return super.onOptionsItemSelected(item)
-    }
+    }*/
 
     override fun onDestroy() {
-        (activity as? AppCompatActivity)?.let {
+        /*(activity as? AppCompatActivity)?.let {
             it.supportActionBar?.setDisplayHomeAsUpEnabled(false)
             it.supportActionBar?.title = getString(R.string.order_title)
             setHasOptionsMenu(false)
-        }
+        }*/
         super.onDestroy()
     }
 
@@ -199,7 +197,7 @@ class ChatFragment : BaseFragment<FragmentChatBinding, ChatViewModel>(), OnChatL
             messageRef.removeValue { error, ref ->
                 binding?.let {
                     if (error != null){
-                        Snackbar.make(it.root, "Error borrar mensaje.", Snackbar.LENGTH_LONG).show()
+                        Snackbar.make(it.root, "Error al borrar mensaje.", Snackbar.LENGTH_LONG).show()
                     } else {
                         Snackbar.make(it.root, "Mensaje borrado.", Snackbar.LENGTH_LONG).show()
                     }

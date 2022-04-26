@@ -6,6 +6,7 @@ import java.sql.Timestamp
 data class OrderModel(
     var id: String = "",
     var clientId: String = "",
+    var clientName: String= "",
     var products: Map<String, ProductOrderModel> = hashMapOf(),
     var totalPrice: Double = 0.0,
     var status: Int = 0,

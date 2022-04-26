@@ -38,20 +38,12 @@
         android:label="Historial de Pedidos"
         tools:layout="@layout/fragment_order">
         <action
-            android:id="@+id/action_nav_order_to_trackFragment"
-            app:destination="@id/trackFragment" />
-        <action
             android:id="@+id/action_nav_order_to_chatFragment"
-            app:destination="@id/chatFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/trackFragment"
-        android:name="com.grt.partnerLicoreria.ui.track.TrackFragment"
-        android:label="TrackFragment"
-        tools:layout="@layout/fragment_track">
-        <argument
-            android:name="orderSelected"
-            app:argType="com.grt.partnerLicoreria.domain.model.OrderModel" />
+            app:destination="@id/chatFragment"
+            app:popUpTo="@id/nav_order" />
+        <action
+            android:id="@+id/action_nav_order_to_nav_category"
+            app:popUpTo="@id/nav_category" />
     </fragment>
     <fragment
         android:id="@+id/chatFragment"
@@ -61,6 +53,10 @@
         <argument
             android:name="orderSelected"
             app:argType="com.grt.partnerLicoreria.domain.model.OrderModel" />
+        <action
+            android:id="@+id/action_chatFragment_to_nav_order"
+            app:destination="@id/nav_order"
+            app:popUpTo="@id/nav_order" />
     </fragment>
     <dialog
         android:id="@+id/addDialogFragment"

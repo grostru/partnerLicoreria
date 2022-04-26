@@ -7,7 +7,6 @@ import com.grt.partnerLicoreria.ui.licoreria.LicoreriaViewModel
 import com.grt.partnerLicoreria.ui.main.MainViewModel
 import com.grt.partnerLicoreria.ui.order.OrderViewModel
 import com.grt.partnerLicoreria.ui.product.ProductViewModel
-import com.grt.partnerLicoreria.ui.track.TrackViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 /**
@@ -40,10 +39,6 @@ val uiModule = module {
 
     viewModel {
         OrderViewModel()
-    }
-
-    viewModel {
-        TrackViewModel()
     }
 
     viewModel {

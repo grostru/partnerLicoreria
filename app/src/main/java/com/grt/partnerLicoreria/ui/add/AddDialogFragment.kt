@@ -59,7 +59,7 @@ class AddDialogFragment : DialogFragment(), DialogInterface.OnShowListener {
     private var product: ProductModel? = null
     private var category: CategoryModel? = null
 
-    val args: ProductFragmentArgs by navArgs()
+    val args: AddDialogFragmentArgs by navArgs()
 
     private var photoSelectedUri: Uri? = null
 
@@ -130,6 +130,7 @@ class AddDialogFragment : DialogFragment(), DialogInterface.OnShowListener {
                                 save(product, eventPost.documentId!!)
                             } else {
                                 product?.apply {
+                                    id = eventPost.documentId.toString()
                                     name = it.etName.text.toString().trim()
                                     description = it.etDescription.text.toString().trim()
                                     imgUrl = eventPost.photoUrl
@@ -151,7 +152,7 @@ class AddDialogFragment : DialogFragment(), DialogInterface.OnShowListener {
     }
 
     private fun initProduct() {
-        product = (activity as? MainAux)?.getProductSelected()
+        product = args.product
         category = args.category
 
         product?.let { product ->
@@ -344,6 +345,7 @@ class AddDialogFragment : DialogFragment(), DialogInterface.OnShowListener {
                 .addOnCompleteListener {
                     enableUI(true)
                     binding?.progressBar?.visibility = View.INVISIBLE
+                    vm.onAttachProductsCategory(category!!)
                     dismiss()
                 }
         }

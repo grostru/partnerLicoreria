@@ -1,6 +1,7 @@
 package com.grt.partnerLicoreria.common
 
 import android.app.Application
+import com.cursosandroidant.nilopartner.fcm.VolleyHelper
 import com.grt.partnerLicoreria.data.di.dataModule
 import com.grt.partnerLicoreria.di.uiModule
 import com.grt.partnerLicoreria.di.usecaseModule
@@ -14,8 +15,16 @@ import org.koin.core.context.startKoin
  * definida en el manifest
  */
 class PartnerLicoreriaApplication : Application() {
+
+    companion object{
+        lateinit var volleyHelper: VolleyHelper
+    }
+
     override fun onCreate() {
         super.onCreate()
+
+        volleyHelper = VolleyHelper.getInstance(this)
+
         startKoin {
             androidContext(this@PartnerLicoreriaApplication)
             modules(
