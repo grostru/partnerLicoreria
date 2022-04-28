@@ -38,7 +38,7 @@ object Constants {
     const val URL_REALTIME_DATABASE = "https://licoreria-87425-default-rtdb.europe-west1.firebasedatabase.app/"
 
     //FCM
-    const val NILO_PARTNER_RS = "https://nilopartner.000webhostapp.com/NiloPartner/NiloRS.php"
+    const val ELGATO_PARTNER_RS = "https://elgatopartner.000webhostapp.com/ElgatoPartner/ElGatoRS.php"
     const val SEND_NOTIFICATION = "sendNotification"
     const val SEND_NOTIFICATION_BY_TOPIC = "sendNotificationByTopic"
 

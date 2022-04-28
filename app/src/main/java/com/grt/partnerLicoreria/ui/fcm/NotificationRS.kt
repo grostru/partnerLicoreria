@@ -9,7 +9,9 @@ import com.grt.partnerLicoreria.data.Constants
 import org.json.JSONException
 import org.json.JSONObject
 
-
+/**
+ * Clase encargada del Remote Service de las notificaciones
+ */
 class NotificationRS {
     fun sendNotification(title: String, message: String, tokens: String){
         val params = JSONObject()
@@ -22,7 +24,7 @@ class NotificationRS {
 
         val jsonObjectRequest: JsonObjectRequest = object : JsonObjectRequest(
             Method.POST,
-            Constants.NILO_PARTNER_RS, params, Response.Listener { response ->
+            Constants.ELGATO_PARTNER_RS, params, Response.Listener { response ->
                 try {
                     val success = response.getInt(Constants.PARAM_SUCCESS)
                     Log.i("Volley success", success.toString())
@@ -57,7 +59,7 @@ class NotificationRS {
         params.put(Constants.PARAM_IMAGE, photoUrl)
 
         val jsonObjectRequest: JsonObjectRequest = object : JsonObjectRequest(Method.POST,
-            Constants.NILO_PARTNER_RS, params, Response.Listener { response ->
+            Constants.ELGATO_PARTNER_RS, params, Response.Listener { response ->
                 try {
                     val success = response.getInt(Constants.PARAM_SUCCESS)
                     if (success == 3){

@@ -69,8 +69,8 @@
 
     <string name="track_title">Seguimiento del Pedido</string>
 
-    <string name="order_status_oredered">Pedido Realizado</string>
-    <string name="order_status_preparing">Preparando su Pedido</string>
+    <string name="order_status_oredered">Aprobado</string>
+    <string name="order_status_preparing">Preparado</string>
     <string name="order_status_sent">Enviado</string>
     <string name="order_status_delivered">Entregado</string>
     <string name="order_status_unknown">Desconocido</string>

@@ -138,7 +138,7 @@ class OrderFragment : BaseFragment<FragmentOrderBinding, OrderViewModel>(), OnOr
 
                     val notificationRS = NotificationRS()
                     notificationRS.sendNotification(
-                        "Tu pedido ha sido ${aValues[index]}",
+                        "Tu pedido ha sido: ${aValues[index]}",
                         names, tokensStr
                     )
                 }
@@ -148,5 +148,4 @@ class OrderFragment : BaseFragment<FragmentOrderBinding, OrderViewModel>(), OnOr
                     .show()
             }
     }
-
 }
